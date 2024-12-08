@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "aoc2024"
+version = "0.1.0"
+description = "Python solutions for 2024 Advent of Code"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.2"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "sys/python"
+
+[tool.coverage.run]
+omit = [
+    # ignore template file
+    "src/template.py",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+output-format = "grouped"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "TD",
+    "FIX",
+    "PTH",
+    "PLR2004",
+    "ANN",
+    "T20",
+    "COM812",
+    "S101",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+]
+pydocstyle.convention = "google"
+flake8-pytest-style.fixture-parentheses = false
+
+[tool.ruff.format]
+line-ending = "lf"

@@ -1,0 +1,12 @@
+## Python
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.coverage
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
